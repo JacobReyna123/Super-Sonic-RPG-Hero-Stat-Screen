@@ -8,7 +8,7 @@ import PartyOverview from './components/PartyOverview.vue'
   <div class="arcade-bg">
     <header class="top-banner">
       <span class="star-emblem">✴</span>
-      <h1>SUPER RPG: Party Builder</h1>
+      <h1>SUPER SONIC RPG: Party Builder</h1>
       <div class="window-icons">
         <span>⚙</span>
         <span>💾</span>
