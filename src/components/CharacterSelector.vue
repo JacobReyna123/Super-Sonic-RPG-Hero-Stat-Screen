@@ -20,10 +20,11 @@ const party = usePartyStore()
         <div class="hero-card-header" :style="{ backgroundColor: char.color }">
           {{ char.name }}
         </div>
-        <div class="hero-avatar" :style="{ borderColor: char.color }">
-          <span class="avatar-emoji">{{ char.icon }}</span>
-          <span class="role-badge">{{ char.role }}</span>
-        </div>
+       <div class="hero-avatar" :style="{ borderColor: char.color }">
+  <img :src="char.image" :alt="char.name" class="avatar-img" />
+  <span class="role-badge">{{ char.role }}</span>
+</div>
+
         <ul class="mini-stats">
           <li>Max Rings: {{ char.maxRings }}</li>
           <li>Power: {{ char.power }}</li>

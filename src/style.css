@@ -340,3 +340,47 @@ body {
   filter: brightness(1.08);
 }
 
+
+.avatar-img {
+  width: 72px;
+  height: 72px;
+  max-width: 72px;
+  max-height: 72px;
+  object-fit: contain;
+  background: #ffffff;
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 4px;
+  display: block;
+}
+
+.preview-img {
+  width: 92px;
+  height: 92px;
+  max-width: 92px;
+  max-height: 92px;
+  object-fit: contain;
+  background: #ffffff;
+  border: 3px solid #000;
+  border-radius: 6px;
+  padding: 4px;
+  display: block;
+}
+
+.member-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pill-img {
+  width: 24px;
+  height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 2px;
+  display: block;
+}

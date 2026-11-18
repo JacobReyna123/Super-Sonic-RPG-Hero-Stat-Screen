@@ -1,11 +1,12 @@
 import { defineStore } from 'pinia'
 
 const initialCharacters = () => [
-  { id: 'sonic', name: 'SONIC', role: 'Speed', level: 5, maxRings: 80, power: 5, defense: 4, speed: 7, energy: 6, color: '#2b6cff', image: '/images/sonic.png' },
-  { id: 'tails', name: 'TAILS', role: 'Tech', level: 5, maxRings: 60, power: 6, defense: 3, speed: 6, energy: 7, color: '#ffb400', image: '/images/tails.jpg' },
-  { id: 'knuckles', name: 'KNUCKLES', role: 'Power', level: 5, maxRings: 90, power: 8, defense: 7, speed: 4, energy: 5, color: '#e63b2e', image: '/images/knuckles.png' },
-  { id: 'amy', name: 'AMY', role: 'Balance', level: 5, maxRings: 70, power: 5, defense: 5, speed: 5, energy: 8, color: '#ff5fa2', image: '/images/amy.jpg' },
+  { id: 'sonic', name: 'SONIC', role: 'Speed', level: 5, maxRings: 80, power: 5, defense: 4, speed: 7, energy: 6, color: '#2b6cff', image: '/images/Sonic.png' },
+  { id: 'tails', name: 'TAILS', role: 'Tech', level: 5, maxRings: 60, power: 6, defense: 3, speed: 6, energy: 7, color: '#ffb400', image: '/images/Tails.jpg' },
+  { id: 'knuckles', name: 'KNUCKLES', role: 'Power', level: 5, maxRings: 90, power: 8, defense: 7, speed: 4, energy: 5, color: '#e63b2e', image: '/images/Knuckles.png' },
+  { id: 'amy', name: 'AMY', role: 'Balance', level: 5, maxRings: 70, power: 5, defense: 5, speed: 5, energy: 8, color: '#ff5fa2', image: '/images/Amy.jpg' },
 ]
+
 
 
 
