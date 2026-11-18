@@ -1,0 +1,342 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0b1942;
+  color: #ffffff;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  min-height: 100vh;
+}
+
+.arcade-bg {
+  min-height: 100vh;
+  padding: 20px;
+  background:
+    linear-gradient(180deg, #102a71 0%, #1d4ed8 55%, #0a1433 55%),
+    repeating-conic-gradient(#173a8f 0% 25%, #0c1f52 0% 50%) 50% / 48px 48px;
+}
+
+/* Top Banner */
+.top-banner {
+  max-width: 1240px;
+  margin: 0 auto 20px;
+  background: #0a1336;
+  border: 4px solid #facc15;
+  box-shadow: 0 0 0 4px #000, inset 0 0 0 3px #b45309;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.top-banner h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(14px, 2.2vw, 24px);
+  color: #38bdf8;
+  text-shadow: 3px 3px 0 #000;
+  letter-spacing: 1px;
+}
+
+.star-emblem {
+  background: #facc15;
+  color: #0a1336;
+  padding: 6px 10px;
+  font-size: 22px;
+  border: 2px solid #000;
+}
+
+.window-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.window-icons span {
+  background: #1e293b;
+  border: 2px solid #94a3b8;
+  padding: 4px 8px;
+  font-size: 16px;
+}
+
+/* 3-Column Grid */
+.dashboard-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+@media (max-width: 980px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Gold-Bordered RPG Panels */
+.panel {
+  background: linear-gradient(180deg, #0d1b4c 0%, #070e2b 100%);
+  border: 4px solid #facc15;
+  box-shadow: 0 0 0 4px #000, inset 0 0 0 3px #92400e;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.panel-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 15px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 2px 0 #000;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 3px solid #facc15;
+}
+
+/* Column 1: Hero Grid */
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.hero-card {
+  background: #13235c;
+  border: 3px solid #64748b;
+  cursor: pointer;
+  transition: transform 0.1s;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-card:hover {
+  transform: translateY(-2px);
+}
+
+.hero-card.active {
+  border-color: #facc15;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.6);
+}
+
+.hero-card-header {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  padding: 4px;
+  border-bottom: 2px solid #000;
+}
+
+.hero-avatar {
+  background: #0a1336;
+  margin: 8px;
+  padding: 10px;
+  border: 2px solid #38bdf8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.avatar-emoji {
+  font-size: 34px;
+}
+
+.role-badge {
+  font-size: 14px;
+  background: #1e293b;
+  padding: 1px 6px;
+  border: 1px solid #94a3b8;
+}
+
+.mini-stats {
+  list-style: none;
+  padding: 0 10px 8px;
+  font-size: 17px;
+  line-height: 1.25;
+  color: #e2e8f0;
+}
+
+.recruit-btn {
+  margin-top: auto;
+  background: #1e293b;
+  color: #94a3b8;
+  border: none;
+  border-top: 2px solid #000;
+  padding: 6px;
+  font-family: 'VT323', monospace;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.recruit-btn.in-party {
+  background: #15803d;
+  color: #ffffff;
+}
+
+/* Column 2: Upgrade Hero */
+.xp-box {
+  background: #0a1336;
+  border: 3px solid #facc15;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gold-text {
+  color: #facc15;
+  font-weight: bold;
+}
+
+.stat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stat-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 21px;
+  margin-bottom: 4px;
+}
+
+.bar-and-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.segmented-bar {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 3px;
+  background: #060b22;
+  border: 2px solid #94a3b8;
+  padding: 4px;
+}
+
+.segment {
+  height: 18px;
+  background: #1e293b;
+}
+
+.segment.filled {
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  box-shadow: inset 0 0 2px #fff;
+}
+
+.plus-btn {
+  background: linear-gradient(180deg, #fde047 0%, #eab308 100%);
+  color: #000;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  border: 3px solid #000;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.plus-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.helper-text {
+  color: #facc15;
+  font-size: 17px;
+  margin: 14px 0;
+  text-align: center;
+}
+
+.preview-card {
+  background: #13235c;
+  border: 3px solid #facc15;
+}
+
+.preview-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.preview-emoji {
+  font-size: 48px;
+}
+
+/* Column 3: Party Overview */
+.totals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px dashed #1e3a8a;
+  padding-bottom: 4px;
+}
+
+.roster-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.member-pill {
+  background: #0a1336;
+  border: 2px solid #38bdf8;
+  padding: 3px 8px;
+  font-size: 16px;
+}
+
+.verdict-box {
+  background: #3b0d0d;
+  border: 3px solid #ef4444;
+  padding: 12px;
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.verdict-box.ready {
+  background: #0c2e1c;
+  border-color: #facc15;
+}
+
+.verdict-title {
+  color: #facc15;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.reset-btn {
+  width: 100%;
+  background: linear-gradient(180deg, #fde047 0%, #ca8a04 100%);
+  color: #000;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  border: 4px solid #000;
+  box-shadow: inset 0 0 0 2px #fef08a;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  filter: brightness(1.08);
+}
+
