@@ -8,6 +8,7 @@ const initialCharacters = () => [
 ]
 
 
+
 export const usePartyStore = defineStore('party', {
   state: () => ({
     xpPool: 120,
