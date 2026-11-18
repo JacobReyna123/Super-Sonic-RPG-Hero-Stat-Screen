@@ -1,19 +1,20 @@
 import { defineStore } from 'pinia'
 
 const initialCharacters = () => [
-  { id: 'teal-hedgehog', name: 'Teal Hedgehog', role: 'Speed', level: 5, maxRings: 80, power: 5, defense: 4, speed: 7, energy: 6, color: '#2bd9c5', icon: '🦔' },
-  { id: 'orange-fox', name: 'Orange Fox', role: 'Tech', level: 5, maxRings: 60, power: 6, defense: 3, speed: 6, energy: 7, color: '#ff9800', icon: '🦊' },
-  { id: 'red-echidna', name: 'Red Echidna', role: 'Power', level: 5, maxRings: 90, power: 8, defense: 7, speed: 4, energy: 5, color: '#e63b2e', icon: '🥊' },
-  { id: 'pink-hedgehog', name: 'Pink Hedgehog', role: 'Balance', level: 5, maxRings: 70, power: 5, defense: 5, speed: 5, energy: 8, color: '#ff5fa2', icon: '🔨' },
+  { id: 'sonic', name: 'SONIC', role: 'Speed', level: 5, maxRings: 80, power: 5, defense: 4, speed: 7, energy: 6, color: '#2b6cff', image: '/images/sonic.png' },
+  { id: 'tails', name: 'TAILS', role: 'Tech', level: 5, maxRings: 60, power: 6, defense: 3, speed: 6, energy: 7, color: '#ffb400', image: '/images/tails.jpg' },
+  { id: 'knuckles', name: 'KNUCKLES', role: 'Power', level: 5, maxRings: 90, power: 8, defense: 7, speed: 4, energy: 5, color: '#e63b2e', image: '/images/knuckles.png' },
+  { id: 'amy', name: 'AMY', role: 'Balance', level: 5, maxRings: 70, power: 5, defense: 5, speed: 5, energy: 8, color: '#ff5fa2', image: '/images/amy.jpg' },
 ]
+
 
 export const usePartyStore = defineStore('party', {
   state: () => ({
     xpPool: 120,
     upgradeCost: 40,
     characters: initialCharacters(),
-    activeId: 'teal-hedgehog',
-    recruited: ['teal-hedgehog', 'orange-fox', 'red-echidna', 'pink-hedgehog'],
+    activeId: 'sonic',
+    recruited: ['sonic', 'tails', 'knuckles', 'amy'],
   }),
   getters: {
     activeCharacter: (state) => state.characters.find((c) => c.id === state.activeId),
@@ -34,7 +35,7 @@ export const usePartyStore = defineStore('party', {
       state.characters
         .filter((c) => state.recruited.includes(c.id))
         .reduce((sum, c) => sum + c.defense, 0),
-    partyVerdict(state) {
+    partyVerdict() {
       if (this.partyMembers.length === 0) {
         return { ready: false, text: 'No heroes recruited! Click a hero card to add them to your party.' }
       }
@@ -72,8 +73,8 @@ export const usePartyStore = defineStore('party', {
     resetParty() {
       this.xpPool = 120
       this.characters = initialCharacters()
-      this.activeId = 'teal-hedgehog'
-      this.recruited = ['teal-hedgehog', 'orange-fox', 'red-echidna', 'pink-hedgehog']
+      this.activeId = 'sonic'
+      this.recruited = ['sonic', 'tails', 'knuckles', 'amy']
     },
   },
 })
